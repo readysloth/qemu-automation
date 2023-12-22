@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source "$(dirname "$(command -v "$0")")/type_in.sh"
+
 qemu_drive_template() {
   file="$1"
   serial="$2"
