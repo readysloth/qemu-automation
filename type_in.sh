@@ -71,6 +71,7 @@ type_in() {
         "'") c=apostrophe ;;
         '"') c=shift-apostrophe ;;
         '\*') c=asterisk ;;
+        ':') c=shift-semicolon ;;
         '_') echo "sendkey shift-minus" | $QSEND && continue ;;
         '~') DO_UPPERCASE=yes && continue ;;
       esac
