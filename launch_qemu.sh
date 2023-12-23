@@ -14,7 +14,7 @@ qemu_drive_template() {
   option="$option,media=disk"
 
   option="$option -device ahci,id=ahci_$serial"
-  option="$option -device scsi-hd,drive=drive_$serial"
+  option="$option -device ide-hd,drive=drive_$serial"
   option="$option,serial=device_$serial"
   option="$option,bus=ahci_$serial.0"
   option="$option,bootindex=$bootindex"
