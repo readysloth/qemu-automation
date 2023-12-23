@@ -43,7 +43,7 @@ QEMU_DEFAULT_OPTIONS="$QEMU_DEFAULT_OPTIONS -device pci-serial,chardev=serial_po
 
 if [ "$DISK" != '-' ]
 then
-  TARGET_DISK_OPTS="$(qemu_drive_template "$TARGET_DISK" "$TARGET_DISK_$RANDOM" 1)"
+  TARGET_DISK_OPTS="$(qemu_drive_template "$DISK" "$DISK_$RANDOM" 1)"
 fi
 
 QEMU_OPTIONS="$QEMU_DEFAULT_OPTIONS $TARGET_DISK_OPTS $QEMU_OPTIONS_APPEND"
