@@ -49,6 +49,7 @@ fi
 QEMU_OPTIONS="$QEMU_DEFAULT_OPTIONS $TARGET_DISK_OPTS $QEMU_OPTIONS_APPEND"
 QEMU_OPTIONS="$(echo "$QEMU_OPTIONS" | tr '\n' ' ')"
 
+echo "qemu-system-x86_64 $QEMU_OPTIONS" >&2
 qemu-system-x86_64 $QEMU_OPTIONS &
 
 source "$SCENARIO"
